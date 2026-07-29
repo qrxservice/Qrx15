@@ -1,0 +1,56 @@
+modules = ["nodejs-20", "bash", "web", "postgresql-16"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+run = ["bash", "-c", "export NODE_ENV=production; node --enable-source-maps artifacts/api-server/dist/index.mjs"]
+build = ["bash", "-c", "pnpm --filter @workspace/api-server run build && pnpm --filter @workspace/rxmanager run build"]
+
+[agent]
+stack = "BEST_EFFORT_FALLBACK"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[nix]
+channel = "stable-25_05"
+packages = ["try", "nano", "rsync"]
+
+[userenv]
+
+[userenv.shared]
+LOG_LEVEL = "info"
+NODE_ENV = "development"
+UPLOAD_DIR = "/home/runner/workspace/uploads"
+
+[userenv.development]
+APP_URL = "https://a04d03c9-4c94-4f1e-aae9-e77ae1850f08-00-29tell89ixvv0.pike.replit.dev"
+
+[userenv.production]
+APP_URL = "https://qrx-11--yaxemaf495.replit.app"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "PORT=8080 pnpm --filter @workspace/api-server run dev & PORT=5000 pnpm --filter @workspace/rxmanager run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"

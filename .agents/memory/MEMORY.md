@@ -1,0 +1,10 @@
+- [Subscription Billing Design](subscription-billing-design.md) — monthly fee, autoApprove, months column; BMDC-tier vs admin-setting rate are intentionally separate.
+- [Currency & Multi-currency Billing Design](currency-billing-design.md) — rightmost XFF for IP detection, per-entity currency freeze pattern, SSLCommerz BDT-only gate, geoip-lite external bundling rule.
+- [AdSense Slot Design](adsense-slot-design.md) — adsense_slots table, 7 fixed positions, bulk-upsert seed at module load, raw HTML injection via dangerouslySetInnerHTML (admin-trust model).
+- [Tools Module Design](tools-module-design.md) — DB schema + API + custom hooks (no codegen); JSZip for zip export/import; sandbox via srcdoc without allow-same-origin.
+- [Image Upload URL Pattern](image-upload-url-pattern.md) — store objectPath in DB, never storageUrl(); canReadObject does DB lookups by objectPath; add new image columns there too.
+- [Deploy: single-process static serving](deployment-single-process-static-serving.md) — autoscale publish failed (404 on `/`) until api-server served the built rxmanager frontend + SPA fallback in production.
+- [QRX security hardening decisions](security-hardening-decisions.md) — bcryptjs over bcrypt (native build hangs in sandbox), lazy plaintext→bcrypt migration, CORS locked to APP_URL/REPLIT_DOMAINS.
+- [Queue Display Infrastructure](queue-display-infrastructure.md) — Socket.IO rooms, /display/:deviceId public page, voice announcements, Vite ws proxy, admin dashboard.
+- [api-client-react build & TypeScript project references](api-client-react-build.md) — must rebuild lib after source changes; never append to giant api.ts; use separate files.
+- [Blood Donor System Design](blood-donor-system.md) — isDonor as text not boolean; phone hidden until request accepted; nearby uses JS scoring.

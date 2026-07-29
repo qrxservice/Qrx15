@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 0936218ae2624430a7e904f5bdd0ed5f0ee299a9 jafrinmushfika <61681305-jafrinmushfika@users.noreply.replit.com> 1783073873 +0000	branch: Created from origin/main
+0936218ae2624430a7e904f5bdd0ed5f0ee299a9 07178fbeab4c7409120664a23641d3e880443672 Replit Agent <agent@replit.com> 1783074659 +0000	commit: Add payment gateway settings and manual payment option
+07178fbeab4c7409120664a23641d3e880443672 df817730d780606531277f17ea2ba4126d16e48f Replit Agent <agent@replit.com> 1783083788 +0000	commit: Add secure online payment for doctor subscriptions via SSLCommerz
+df817730d780606531277f17ea2ba4126d16e48f 16d811e39819dcd1c5f9f662a67f04603d658138 Replit Agent <agent@replit.com> 1783087213 +0000	commit: Published your App
+16d811e39819dcd1c5f9f662a67f04603d658138 2ab7a4d62e0f562fc3d1663741042e1c344a387d Replit Agent <agent@replit.com> 1783099885 +0000	commit: Add two-factor authentication for master admin login and improve user registration
+2ab7a4d62e0f562fc3d1663741042e1c344a387d 2ab7a4d62e0f562fc3d1663741042e1c344a387d jafrinmushfika <jafrinmushfika@gmail.com> 1783104975 +0000	Branch: renamed refs/heads/main to refs/heads/main

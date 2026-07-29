@@ -1,0 +1,20 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "r8MN5LTcpjaUA6G_TSML8"
+uri = "file://qrx-project.tar.gz"
+type = "unspecified"
+title = "QRX Project — Full Source (tar.gz)"
+
+[[outputs]]
+id = "l1tLe5y2kFlprhg_oyG-E"
+uri = "file://qrx-project.zip"
+type = "unspecified"
+title = "QRX Project — Full Source (ZIP)"
+
+[[outputs]]
+id = "s1oLfwTgVPibHeAGsjyFP"
+uri = "file://qrx-transfer.tar.gz"
+type = "unspecified"
+title = "QRX Transfer Archive"
